@@ -1,0 +1,96 @@
+.container {
+	align-items: center;
+	background: #ccc;
+	border-top-left-radius: 5px;
+	border-top-right-radius: 5px;
+	display: flex;
+	height: 100vh;
+	justify-content: center;
+}
+
+.video {
+	background-color: black;
+	height: 100%;
+	width: 100%;
+}
+
+.c-video {
+	max-width: 750px;
+	overflow: hidden;
+	position: relative;
+	width: 100%;
+}
+
+.c-video:hover .controls {
+	transform: translateY(0);
+}
+
+.controls {
+	background-color: rgba(0, 0, 0, 0.7);
+	bottom: 0;
+	display: flex;
+	flex-wrap: wrap;
+	position: absolute;
+	transform: translateY(100%) translateY(-5px);
+	transition: all 0.2s;
+	width: 100%;
+}
+
+.buttons {
+	padding: 5px;
+}
+
+.buttons button#play-pause {
+	background: none;
+	border: 0;
+	border-radius: 5px;
+	cursor: pointer;
+	outline: 0;
+}
+
+.buttons button#nextVideo {
+	background: none;
+	border: 0;
+	border-radius: 5px;
+	content: "\f051";
+	cursor: pointer;
+	outline: 0;
+}
+
+.buttons button#play-pause:before {
+	color: #fff;
+	content: "\f144";
+	display: inline-block;
+	font-family: "Font Awesome 5 Free";
+	font-size: 28px;
+	-webkit-font-smoothing: antialiased;
+	height: 35px;
+	width: 30px;
+}
+
+.buttons button.play:before {
+	content: "\f144";
+}
+
+.buttons button.pause:before {
+	content: "\f28b";
+}
+
+.bar {
+	background-color: black;
+	height: 10px;
+	left: 0;
+	top: 0;
+	width: 100%;
+}
+
+.timer:before {
+	width: 0%;
+}
+
+.timer {
+	background-color: #ff4500;
+	border: none;
+	border-radius: 2px;
+	height: 10px;
+}
